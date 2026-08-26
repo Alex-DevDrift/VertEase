@@ -113,8 +113,6 @@ const AddPatient: React.FC = () => {
     ototoxicDrugs: [] as string[],
     medicationsTaken: [] as string[],
     comorbidities: [] as string[],
-    cause: "",
-    vertigo: "",
   });
 
   function generatePatientId() {
@@ -303,24 +301,6 @@ const AddPatient: React.FC = () => {
                   </View>
                 </View>
               </View>
-
-              <Text style={styles.label}>Cause</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter cause (if known)"
-                value={formData.cause}
-                onChangeText={(text) => handleInputChange("cause", text)}
-              />
-
-              <Text style={styles.label}>Vertigo Description</Text>
-              <TextInput
-                style={styles.textArea}
-                placeholder="Brief description of vertigo symptoms"
-                multiline
-                numberOfLines={3}
-                value={formData.vertigo}
-                onChangeText={(text) => handleInputChange("vertigo", text)}
-              />
             </>
           )}
 
